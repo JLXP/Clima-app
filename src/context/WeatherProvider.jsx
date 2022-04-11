@@ -12,6 +12,7 @@ const WeatherProvider = ({children}) => {
 
     const [result, setResult] = useState({});
     const [loading, setLoading] = useState(false);
+    const [notResult,setNotResult] = useState(false);
 
     const dataSearch = (e) => {
         setSearch({
@@ -59,7 +60,8 @@ const WeatherProvider = ({children}) => {
             dataSearch,
             searchWheather,
             result,
-            loading
+            loading,
+            notResult
         }}
     >
         {children}
