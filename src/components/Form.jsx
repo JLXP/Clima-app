@@ -17,7 +17,7 @@ export const Form = () => {
         setAlert('All fields are required');
       return;
     }
-    console.log(search);
+    setAlert('');
     searchWheather(search);
 
 

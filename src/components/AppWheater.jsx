@@ -6,7 +6,7 @@ import { Loading } from './Loading';
 
 export const AppWheater = () => {
 
-  const {result,loading} = useWheater();
+  const {result,loading,notResult} = useWheater();
 
   return (
     <>
@@ -14,7 +14,10 @@ export const AppWheater = () => {
             <Form/>
             {
             loading ? <Loading /> : 
-            result?.name &&<Result/>}
+            result?.name ? <Result/>:
+            notResult? <p>{notResult}</p>:
+            <p>El clima se va a mostrar aqui</p>
+            }
         </main>
     </>
   )
